@@ -1,0 +1,43 @@
+.footer-container {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .footer-content,
+  .footer-contact {
+    margin: 10px 0;
+  }
+  
+  .footer-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  .contact-info {
+    background: white; /* Ensure footer has a white background */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .contact-info div {
+    margin: 0 10px;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+  

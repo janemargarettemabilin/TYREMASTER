@@ -1,0 +1,101 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px; /* Adjust width for content spacing */
+    text-align: center;
+    position: relative;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: red;
+  }
+  
+  .back-button .arrow {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .back-button .arrow:hover {
+    text-decoration: underline;
+  }
+  
+  .back-button .back-text {
+    cursor: default;
+    color: black; /* Optional: Make text non-interactive */
+  }
+  
+  .auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px; /* Add spacing between elements */
+  }
+  
+  .auth-option {
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 20px; /* Add padding for better proportions */
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    flex: 1;
+    max-width: 120px; /* Prevent oversized elements */
+  }
+  
+  .auth-option img {
+    width: 60px; /* Adjusted icon size */
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .auth-option p {
+    font-size: 14px;
+    color: black;
+    margin: 0;
+  }
+  
+  .auth-option:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+    border-color: #646cff; /* Add border highlight */
+  }
+  
+  .auth-option.selected {
+    border-color: #646cff;
+    transform: scale(1.1); /* Increased scale for selected option */
+  }
+  .submit-button {
+    margin-top: 20px;
+    background: #000; /* Black button */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Full width */
+    transition: background 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background: #333; /* Slightly lighter black on hover */
+  }
+  
