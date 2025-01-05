@@ -9,7 +9,7 @@ const Home = () => {
       <Header username="Admin1234" department="Accounting Department" />
 
       <section className="banner-section">
-        <div className="banner-text">COMPANY TAGLINE/ <br /> MOTTO GOES HERE</div>
+        <div className="banner-text">"Team Work <br />  and People Focused"</div>
       </section>
 
       <section className="mission-vision-values">

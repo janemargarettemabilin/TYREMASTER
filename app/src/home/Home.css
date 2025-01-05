@@ -14,8 +14,6 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-position: center 80%; /* Shift the focus slightly upward */
-
 }
 
 .banner-text {
@@ -69,3 +67,5 @@ body, html {
   font-size: 1em;
   line-height: 1.5;
 }
+
+

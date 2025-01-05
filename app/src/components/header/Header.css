@@ -1,126 +1,114 @@
-/* Header Styles */
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  background-color: rgb(238, 26, 38);
   padding: 10px 20px;
-  background-color: rgba(237,27,38,255);
-  color: white;
-  position: fixed; /* Fix the header at the top */
-  top: 0; /* Ensure it's at the very top */
-  left: 0; /* Span the entire width */
-  width: 100%;
-  height: 60px; /* Fixed height for consistency */
-  z-index: 1000; /* Ensure it's above other elements */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
 }
 
-/* Logo on the left */
-.header-left .header-logo {
-  height: 50px; /* Slightly increase the logo size for better visibility */
-  margin-right: 20px; /* Add spacing between logo and tabs */
-}
-
-/* Navigation tabs in the center */
-.header-tabs ul {
+.logo-container {
   display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.nav-bar {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-links {
   list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.header-tabs ul li {
-  margin: 0 30px;
-}
-
-.header-tabs ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.header-tabs ul li a:hover {
-  text-decoration: underline;
-  color: #f9f9f9;
-}
-
-/* Admin Profile Dropdown on the right */
-.header-right {
-  position: relative;
   display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-right: 20px; /* Add spacing from the right edge */
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.profile-img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
+  gap: 20px;
 }
 
-.profile-username {
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
   font-weight: bold;
-  font-size: 16px;
+  padding: 5px;
 }
 
-.profile-department {
-  font-size: 12px;
-  color: #f1f1f1;
-}
-.profile:hover {
-  opacity: 0.9; /* Slightly reduce opacity for a hover effect */
-  cursor: pointer;
-}
-.dropdown-arrow {
-  font-size: 12px;
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
 
 .dropdown {
   position: absolute;
-  top: 60px;
-  right: 5px; /* Adjust the dropdown position */
+  top: 100%;
+  left: 0;
   background-color: white;
-  color: black;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  overflow: hidden;
-  z-index: 10;
-  min-width: 150px; /* Ensure the dropdown doesn't collapse */
-}
-
-.dropdown ul {
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding: 10px;
+  z-index: 1000;
+  text-align: left;
+  width: 130px; /* Adjust the width as needed */
 }
 
-.dropdown ul li {
-  padding: 12px 20px;
-  cursor: pointer;
+.dropdown li:hover {
+  background-color: #f5f5f5;
 }
 
-.dropdown ul li:hover {
-  background-color: #f5f5f5; /* Lighter hover background */
-  color: #000;
-}
-
-.dropdown ul li a {
+.dropdown li a {
   color: black;
   text-decoration: none;
+  font-weight: 100;
+  font-size: small;
+  display: inline-block;
+  width: 100%;
+  text-align: left; /* Left-align text inside the link */
 }
+
+.dropdown li:hover {
+  background-color: #f5f5f5;
+}
+
+
+
+.nav-links li:hover .dropdown {
+  display: block;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-details {
+  color: white;
+
+}
+
+.dropdown-arrow {
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 35px; /* Adjust size if needed */
+  vertical-align: middle; /* Align with the text */
+}
+
+.dropdown-arrow:hover {
+  color: lightgray;
+}
+

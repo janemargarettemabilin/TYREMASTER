@@ -1,60 +1,55 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 
-const Header = ({ username = "Admin1234", department = "Accounting Department" }) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
-  const handleLogout = () => {
-    alert("Logged out successfully!");
-    // Perform logout functionality here
-  };
-
+const Header = () => {
   return (
     <header className="header">
-      {/* Left: Logo */}
-      <div className="header-left">
-        <img src="/logo.png" alt="Tyremaster Logo" className="header-logo" />
+      <div className="logo-container">
+        <img src="logo.png" alt="Tyremaster Logo" className="logo" />
       </div>
-
-      {/* Center: Navigation Tabs */}
-      <nav className="header-tabs">
-        <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/operations">Operations</a></li>
-          <li><a href="/cashier">Cashier</a></li>
-          <li><a href="/billing">Billing & Collection</a></li>
+      <nav className="nav-bar">
+        <ul className="nav-links">
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/operations">Operations</a>
+            <ul className="dropdown">
+              <li><a href="/operations/customer-inquiry">Customer Inquiry</a></li>
+              <li><a href="/operations/assessment-form">Assessment Form</a></li>
+              <li><a href="/operations/af-history">AF History</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/cashier">Cashier</a>
+            <ul className="dropdown">
+              <li><a href="/cashier/customer-inquiry">Customer Inquiry</a></li>
+              <li><a href="/cashier/assessment-form">Assessment Form</a></li>
+              <li><a href="/cashier/af-history">AF History</a></li>
+              <li><a href="/cashier/job-order-history">Job Order History</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/billing-collection">Billing & Collection</a>
+            <ul className="dropdown">
+              <li><a href="/billing/fleet-billing">Fleet Billing</a></li>
+              <li className="dropdown-divider"></li>
+              <li><a href="/billing/billing-list">Billing List</a></li>
+              <li><a href="/billing/fleet-billing-pending">Fleet Billing Pending</a></li>
+              <li className="dropdown-divider"></li>
+              <li><a href="/billing/fleet-jo-list-all">Fleet JO List All</a></li>
+              <li><a href="/billing/accounts-receivable">Account Receivable</a></li>
+            </ul>
+          </li>
           <li><a href="/reports">Reports</a></li>
         </ul>
       </nav>
-
-      {/* Right: Admin Profile */}
-      <div className="header-right">
-        <div className="profile" onClick={toggleDropdown}>
-          <img
-            src="/profile.png"
-            alt="Admin Profile"
-            className="profile-img"
-          />
-          <div className="profile-info">
-            <span className="profile-username">{username}</span>
-            <span className="profile-department">{department}</span>
-          </div>
-          <span className="dropdown-arrow">▼</span>
+      <div className="profile-container">
+        <img src="/path-to-profile/profile-icon.png" alt="Profile" className="profile-icon" />
+        <div className="profile-details">
+          <span>Admin1234</span>
+          <br />
+          <span>Accounting Department</span>
         </div>
-
-        {dropdownOpen && (
-          <div className="dropdown">
-            <ul>
-              <li><a href="/profile">Profile</a></li>
-              <li><a href="/settings">Settings</a></li>
-              <li onClick={handleLogout}>Logout</li>
-            </ul>
-          </div>
-        )}
+        <div className="dropdown-arrow">&#9662;</div>
       </div>
     </header>
   );

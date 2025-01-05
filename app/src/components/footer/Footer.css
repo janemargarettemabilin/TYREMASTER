@@ -1,43 +1,33 @@
 .footer-container {
-    background-color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-  }
-  
-  .footer-content,
-  .footer-contact {
-    margin: 10px 0;
-  }
-  
-  .footer-title {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #333;
-  }
-  .contact-info {
-    background: white; /* Ensure footer has a white background */
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .contact-info div {
-    margin: 0 10px;
-  }
-  
-  .contact-info p {
-    margin: 5px 0;
-  }
-  
+  background-color: rgb(246, 238, 238);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: none; /* Removed shadow to avoid the line effect */
+  margin: 0;
+}
+.footer-container {
+  transform: translateZ(0); /* Forces GPU rendering */
+}
+.footer-divider {
+  outline: 1px solid rgba(211, 0, 0, 0.1); /* Faint line */
+}
+
+.footer-divider,
+.footer-container::after,
+.footer-container::before {
+    border: none;
+    background: none;
+}
+
+
+.footer-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
