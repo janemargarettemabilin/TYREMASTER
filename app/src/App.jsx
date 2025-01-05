@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Login from "./login/Login";
 import SignUp from "./signup/SignUp";
 import Home from "./home/Home";
+import CustomerInquiry from "./pages/Operations/CustomerInquiry";
 import "./App.css";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/operations/customer-inquiry" element={<CustomerInquiry />} />
       </Routes>
     </div>
   );
