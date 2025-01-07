@@ -4,7 +4,9 @@ import Login from "./login/Login";
 import SignUp from "./signup/SignUp";
 import Home from "./home/Home";
 import CustomerInquiry from "./pages/Operations/CustomerInquiry";
+import AssessmentForm from "./pages/Operations/AssessmentForm";
 import "./App.css";
+
 
 const App = () => {
   // Determine the current route
@@ -20,6 +22,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
         <Route path="/operations/customer-inquiry" element={<CustomerInquiry />} />
+        <Route path="/operations/assessment-form" element={<AssessmentForm />} />
       </Routes>
     </div>
   );

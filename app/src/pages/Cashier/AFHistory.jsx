@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/header/Header"; // Adjust path based on structure
-import "./CustomerInquiry.css";
+import "./AFHistory.css";
 
 const CustomerInquiry = () => {
   const [formData, setFormData] = useState({
@@ -101,4 +101,4 @@ const CustomerInquiry = () => {
   );
 };
 
-export default CustomerInquiry;
+export default AFHistory;

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo-container">
-        <img src="logo.png" alt="Tyremaster Logo" className="logo" />
+        <img src="/logo.png" alt="Tyremaster Logo" className="logo" />
       </div>
       <nav className="nav-bar">
         <ul className="nav-links">
